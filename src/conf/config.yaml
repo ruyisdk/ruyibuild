@@ -1,0 +1,10 @@
+docker:
+    repo_url: amd64/ubuntu
+    tag: "latest"
+basic_repo:
+        repo_url: https://github.com/qemu/qemu.git
+        branch: master
+build_script:
+        repo_url: https://gitee.com/jean9823/ruyibuild_script.git
+        branch: master
+        path: qemu/qemu_ubuntu.sh

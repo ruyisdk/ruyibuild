@@ -1,0 +1,7 @@
+test
+project
+__pycache__
+ruyibuild.egg-info
+.vscode
+build
+dist
