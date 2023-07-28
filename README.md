@@ -160,7 +160,7 @@ $ docker rm \<container name or container id>     //删除容器
 另一种方式是在当前工作目录下执行以下命令进行销毁
 
 ````
-$ ruyibuild destory
+$ ruyibuild destroy
 ````
 
 这里需要注意的是如果容器不用了，一定要删除，否则，在相同工作目录下执行 ruyibuild generate \<name> 时会因为容器名称已经存在而报错
@@ -187,7 +187,7 @@ $ ruyibuild version     //查询版本
 $ ruyibuild init <directory> [-f <ruyicfg_directory>]    //创建工作目录
 $ ruyibuild update      //下载镜像和代码
 $ ruyibuild generate [<name>]    //运行docker容器，执行构建
-$ ruyibuild destory   //销毁docker容器，当使用ruyibuild generate进入容器debug完成后，可以使用该命令销毁容器
+$ ruyibuild destroy   //销毁docker容器，当使用ruyibuild generate进入容器debug完成后，可以使用该命令销毁容器
 ````
 
 #### 5. 执行构建脚本

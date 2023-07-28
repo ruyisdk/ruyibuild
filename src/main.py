@@ -10,7 +10,7 @@ from command.generate import Generate
 
 class RuyiBuildApp:
   def __init__(self):
-    self.cmdlist = ['help', 'version', 'init', 'update', 'generate', 'destory']
+    self.cmdlist = ['help', 'version', 'init', 'update', 'generate', 'destroy']
    
   def run_command(self, commandlist):
     if commandlist[0] not in self.cmdlist:
@@ -50,7 +50,7 @@ class RuyiBuildApp:
                 generate.run()
             else:
                 logger.error('Invalid command, please run "ruyibuild help" for help')
-        if commandlist[0] == 'destory':
+        if commandlist[0] == 'destroy':
             if len(commandlist) == 1:
                 generate = Generate()
                 generate.debug_finish()
