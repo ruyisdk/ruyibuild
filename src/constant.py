@@ -7,5 +7,5 @@ version                            print the program version\n\
 init -d <dir> [-f <yaml_dir>]      initialize an ruyibuild working directory\n\
 update                             pull docker image, download package source code and download build script\n\
 generate [<name>]                  if there is no <name>, run and enter a docker container, or run a docker container, then build and packaging in container, package name is <name>\n\
-destory                            destory docker container\n\
+destroy                            destroy docker container\n\
 '

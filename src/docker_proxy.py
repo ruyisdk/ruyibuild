@@ -31,7 +31,7 @@ class DockerProxy():
         )
         return resp
 
-    def container_destory(self, container):
+    def container_destroy(self, container):
         container.stop()
         container.remove(v=True)
 

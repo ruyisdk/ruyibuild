@@ -37,7 +37,7 @@ class Generate:
                 self.delete_directory()
             else:
                 logger.error('package build failed')
-            self.destory_container(container)
+            self.destroy_container(container)
         else:
             command = f'docker exec -it {container_obj.id} /bin/bash'
             os.system(command)
@@ -71,7 +71,7 @@ class Generate:
             try:
                 shutil.rmtree(output_dir)
             except Exception as e:
-                self.destory_container(container)
+                self.destroy_container(container)
                 logger.error(e)
                 raise e
         os.mkdir(output_dir)
@@ -92,13 +92,13 @@ class Generate:
         return p.returncode
 
     
-    def destory_container(self, container):
+    def destroy_container(self, container):
         print (f'container {container.name} is stopping ......')
         try:
-           self.client.container_destory(container)
-           logger.info(f'destory container {container.name} successful')
+           self.client.container_destroy(container)
+           logger.info(f'destroy container {container.name} successful')
         except Exception as e:
-            logger.error(f'destory container {container.name} failed')
+            logger.error(f'destroy container {container.name} failed')
             raise e
 
 
@@ -159,7 +159,7 @@ class Generate:
             logger.error(e)
             raise (e)
         self.chmod_directory(container)
-        self.destory_container(container)
+        self.destroy_container(container)
         
 
 
